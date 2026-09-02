@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#6a11cb,#2575fc);
+        }
+
+        .container{
+            width:80%;
+            margin:30px auto;
+            background:white;
+            border-radius:15px;
+            padding:20px;
+            box-shadow:0 0 20px gray;
+        }
+
+        h1{
+            text-align:center;
+            color:#2575fc;
+        }
+
+        .menu{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        button{
+            background:#2575fc;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            margin:5px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#6a11cb;
+        }
+
+        .section{
+            display:none;
+            text-align:center;
+            padding:20px;
+        }
+
+        img{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            border:5px solid #2575fc;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+        }
+
+        li{
+            background:#e8f0ff;
+            margin:10px;
+            padding:10px;
+            border-radius:8px;
+            font-size:18px;
+        }
+
+        table{
+            margin:auto;
+            border-collapse:collapse;
+        }
+
+        table,th,td{
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Profile</h1>
+
+<div class="menu">
+<button onclick="show('education')">Education</button>
+<button onclick="show('skills')">Skills</button>
+<button onclick="show('gallery')">Gallery</button>
+<button onclick="show('contact')">Contact</button>
+</div>
+
+<div id="education" class="section">
+<h2>Education</h2>
+
+<table>
+<tr>
+<th>Course</th>
+<th>College</th>
+</tr>
+
+<tr>
+<td>B.Tech AI</td>
+<td>St. Xavier's College of Engineering</td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="skills" class="section">
+<h2>Skills</h2>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Python</li>
+</ul>
+
+</div>
+
+<div id="gallery" class="section">
+<h2>Gallery</h2>
+
+<img src="profile.jpg.jpeg" alt="Profile">
+
+</div>
+
+<div id="contact" class="section">
+<h2>Contact Details</h2>
+
+<p><b>Name:</b> sulekha</p>
+<p><b>Email:</b> sulekha@gmail.com</p>
+<p><b>Phone:</b> 9876543210</p>
+
+</div>
+
+</div>
+
+<script>
+function show(id)
+{
+    let sections=document.getElementsByClassName("section");
+
+    for(let i=0;i<sections.length;i++)
+    {
+        sections[i].style.display="none";
+    }
+
+    document.getElementById(id).style.display="block";
+}
+</script>
+
+</body>
+</html>
